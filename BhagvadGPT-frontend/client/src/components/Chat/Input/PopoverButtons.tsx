@@ -1,6 +1,6 @@
 import { useRecoilState } from 'recoil';
 import { EModelEndpoint, SettingsViews } from 'librechat-data-provider';
-import { Button, MessagesSquared, AssistantIcon, DataIcon } from '@librechat/client';
+import { Button, MessagesSquared, BhagvadGPTIcon, DataIcon } from '@librechat/client';
 import type { ReactNode } from 'react';
 import { useChatContext } from '~/Providers';
 import { useLocalize } from '~/hooks';
@@ -84,7 +84,7 @@ export default function PopoverButtons({
         buttonClass: '',
         type: 'alternative',
         handler: () => setSettingsView(SettingsViews.default),
-        icon: <AssistantIcon className={cn('mr-1 h-6 w-[14px]', iconClass)} />,
+        icon: <BhagvadGPTIcon className={cn('mr-1 h-6 w-[14px]', iconClass)} />,
       },
     ],
   };

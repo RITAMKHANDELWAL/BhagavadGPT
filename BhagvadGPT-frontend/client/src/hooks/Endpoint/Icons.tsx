@@ -2,6 +2,7 @@ import { Feather } from 'lucide-react';
 import { EModelEndpoint } from 'librechat-data-provider';
 import {
   GPTIcon,
+  BhagvadGPTIcon,
   Sparkles,
   BedrockIcon,
   AssistantIcon,
@@ -32,7 +33,7 @@ const AssistantAvatar = ({
       />
     );
   } else if (assistantName) {
-    return <AssistantIcon className={cn('text-token-secondary', className)} size={size} />;
+    return <BhagvadGPTIcon className={cn('text-token-secondary', className)} size={size} />;
   }
 
   return <Sparkles className={cn(context === 'landing' ? 'icon-2xl' : '', className)} />;
@@ -60,10 +61,10 @@ const Bedrock = ({ className = '' }: IconMapProps) => {
 
 export const icons: IconsRecord = {
   [EModelEndpoint.azureOpenAI]: AzureMinimalIcon,
-  [EModelEndpoint.openAI]: GPTIcon,
+  [EModelEndpoint.openAI]: BhagvadGPTIcon,
   [EModelEndpoint.anthropic]: AnthropicIcon,
   [EModelEndpoint.google]: GoogleMinimalIcon,
-  [EModelEndpoint.custom]: CustomMinimalIcon,
+  [EModelEndpoint.custom]: BhagvadGPTIcon,
   [EModelEndpoint.assistants]: AssistantAvatar,
   [EModelEndpoint.azureAssistants]: AssistantAvatar,
   [EModelEndpoint.agents]: AgentAvatar,

@@ -4,6 +4,7 @@ import { EModelEndpoint, isAssistantsEndpoint, alternateName } from 'librechat-d
 import {
   Plugin,
   GPTIcon,
+  BhagvadGPTIcon,
   PaLMIcon,
   CodeyIcon,
   GeminiIcon,
@@ -81,7 +82,7 @@ const MessageEndpointIcon: React.FC<IconProps> = (props) => {
     ) : (
       <div className="h-6 w-6">
         <div className="shadow-stroke flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
-          <AssistantIcon className="h-2/3 w-2/3 text-gray-400" />
+          <BhagvadGPTIcon className="h-2/3 w-2/3 text-gray-400" />
         </div>
       </div>
     ),
@@ -129,7 +130,7 @@ const MessageEndpointIcon: React.FC<IconProps> = (props) => {
       name: 'ChatGPT',
     },
     [EModelEndpoint.openAI]: {
-      icon: <GPTIcon size={size * 0.5555555555555556} />,
+      icon: <BhagvadGPTIcon size={size * 0.5555555555555556} />,
       bg: getOpenAIColor(model),
       name: 'ChatGPT',
     },
@@ -148,10 +149,10 @@ const MessageEndpointIcon: React.FC<IconProps> = (props) => {
       name: alternateName[EModelEndpoint.bedrock],
     },
     [EModelEndpoint.custom]: {
-      icon: <CustomMinimalIcon size={size * 0.7} />,
+      icon: <BhagvadGPTIcon size={size * 0.7} />,
       name: 'Custom',
     },
-    null: { icon: <GPTIcon size={size * 0.7} />, bg: 'grey', name: 'N/A' },
+    null: { icon: <BhagvadGPTIcon size={size * 0.7} />, bg: 'grey', name: 'N/A' },
     default: {
       icon: (
         <div className="h-6 w-6">
